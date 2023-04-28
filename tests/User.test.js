@@ -1,27 +1,27 @@
-const User = require('../src/User')
+const User = require("../src/User")
 
-const x = new User('username', 'password', 20);
+const x = new User("username", "password", 20);
 
-describe('User object', () => {
-  test('sets the correct username', () => {
-    expect(x.username).toEqual('username');
+describe("User object", () => {
+  test("sets the correct username", () => {
+    expect(x.username).toEqual("username");
   });
 
-  test('sets the correct password', () => {
-    expect(x.password).toEqual('password');
+  test("sets the correct password", () => {
+    expect(x.password).toEqual("password");
   });
 
-  test('sets the correct age', () => {
+  test("sets the correct age", () => {
     expect(x.age).toEqual(20);
   });
 
-  test('logs in the user', () => {
+  test("logs the user in", () => {
     expect(x.loggedIn).toBe(false);
-    x.login('password');
+    x.login("password");
     expect(x.loggedIn).toBe(true);
   });
 
-  test('logs out the user', () => {
+  test("logs the user out", () => {
     expect(x.loggedIn).toBe(true);
     x.logout();
     expect(x.loggedIn).toBe(false);
