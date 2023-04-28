@@ -15,6 +15,7 @@ class Scooter{
     } else {
       this.user = user;
       this.station = null;
+      this.serial++
     }
   }
 
